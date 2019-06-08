@@ -1,17 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Gul Awaiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--------------------Font Awesome css--------->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!------------Stylesheet ------------->
     <link href="css/style.css" rel="stylesheet" />
-    <!-- Fonts -->
+    <!--------------------Fonts------------------->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
-
     <style>
         #cover-background {
             position: fixed;
@@ -27,41 +25,7 @@
             color: #fff;
         }
     </style>
-    <script>
 
-
-        $(document).ready(function () {
-            /*Load Menu and Footer from html files*/
-            $("#menu-container").load('menu.html');
-            $("#side-bar").load('side-bar.html');
-            $("#footer-container").load('footer.html');
-
-            /*Load script after menu is loaded for responsive layout utton click*/
-            $.getScript("js/js.js");
-            $('#menu-icon').click(function () {
-                if ($("#menu-icon").attr('src') == 'img/menu-open.png') {
-                    $("#menu-icon").attr('src', 'img/menu-close.png');
-                    $(".nav-mobile-menu").slideDown();
-                }
-                else {
-
-                    $("#menu-icon").attr('src', 'img/menu-open.png');
-                    $(".nav-mobile-menu").slideUp();
-                }
-            });
-            /* Load the screen smoothly*/
-            $(window).on('load', function () {
-                $("#cover-background").fadeOut(100);
-
-            });
-            function newWindow() {
-                $(window).load();
-            }
-            setTimeout(newWindow, 200);
-
-        });
-
-    </script>
 </head>
 <body>
     <div id="cover-background"></div>
@@ -278,7 +242,25 @@
         </div>
         <!-----------footer section-------->
         <div id="footer-container"></div>
-    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-1.9.1.js"></script>
 
+    <script>
+        $(document).ready(function () {
+            $("#menu-container").load('menu.html');
+            $("#side-bar").load('side-bar.html');
+            $("#footer-container").load('footer.html');
+            /*Load script after menu is loaded for responsive layout utton click*/
+            $.getScript("js/js.js");
+            /* Load the screen smoothly without any flicker*/
+            $(window).on('load', function () {
+                $("#cover-background").fadeOut(100);
+            });
+            function newWindow() {
+                $(window).load();
+            }
+            setTimeout(newWindow, 200);
+        });
+    </script>
 </body>
 </html>
