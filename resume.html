@@ -1,0 +1,284 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Gul Awaiz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700,900" rel="stylesheet">
+
+    <style>
+        #cover-background {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: #fafafa;
+            z-index: 9999;
+            font-size: 60px;
+            text-align: center;
+            padding-top: 200px;
+            color: #fff;
+        }
+    </style>
+    <script>
+
+
+        $(document).ready(function () {
+            /*Load Menu and Footer from html files*/
+            $("#menu-container").load('menu.html');
+            $("#side-bar").load('side-bar.html');
+            $("#footer-container").load('footer.html');
+
+            /*Load script after menu is loaded for responsive layout utton click*/
+            $.getScript("js/js.js");
+            $('#menu-icon').click(function () {
+                if ($("#menu-icon").attr('src') == 'img/menu-open.png') {
+                    $("#menu-icon").attr('src', 'img/menu-close.png');
+                    $(".nav-mobile-menu").slideDown();
+                }
+                else {
+
+                    $("#menu-icon").attr('src', 'img/menu-open.png');
+                    $(".nav-mobile-menu").slideUp();
+                }
+            });
+            /* Load the screen smoothly*/
+            $(window).on('load', function () {
+                $("#cover-background").fadeOut(100);
+
+            });
+            function newWindow() {
+                $(window).load();
+            }
+            setTimeout(newWindow, 200);
+
+        });
+
+    </script>
+</head>
+<body>
+    <div id="cover-background"></div>
+    <div class="row">
+
+        <div id="menu-container"></div>
+
+        <div class="row content-parent-div">
+            <!----Start Profile Information---->
+            <div class="col-lg-2 col-lg-offset-1 col-md-2 col-md-offset-1 hidden-xs col-sm-3 sidebar box-shadow">
+                <!-----Load side-bar from  html file----->
+                <div id="side-bar">
+                </div>
+            </div>
+
+            <!----End Profile Information---->
+            <!--------Start Main Content-->
+            <div class="col-lg-9 col-md-9 col-xs-12 col-sm-9 main-content">
+
+                <!-----------Start of Resume Section------------>
+                <div class="row box-shadow" id="resume-section">
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+                        <div>
+                            <h3>My Experience</h3>
+                        </div>
+
+                        <!-------Start Education Experience Section------>
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <div class="work-experience">
+                                <div class="work-header">
+                                    <div class="exp-icon">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </div>
+                                    <div class="exp-header">
+                                        <h4>Education</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-exp-list">
+                                <div class="line"></div>
+                                <div class="list-circles">
+                                    <ul>
+                                        <li>
+                                            <div class="experience-sections">
+                                                <p>
+                                                    <span class="post-date">From 2011 - 2012</span>
+                                                    <br />
+                                                    <span class="post">Quaid-I-Azam University Islamabad - Pakistan</span>
+                                                    <br />
+
+                                                    <span class="post-description">
+                                                        Masters of Information Technology.
+                                                    </span>
+
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="experience-sections">
+                                                <p>
+                                                    <span class="post-date">From 2008 - 2010</span>
+                                                    <br />
+                                                    <span class="post">Punjab University Lahore - Pakistan</span>
+                                                    <br />
+
+                                                    <span class="post-description">
+                                                        Bachelor's of Commerce
+                                                    </span>
+
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="experience-sections">
+                                                <p>
+                                                    <span class="post-date">From 2005 - 2007</span>
+                                                    <br />
+                                                    <span class="post">Federal Government College Mangla, Jhelum - Pakistan</span>
+                                                    <br />
+
+                                                    <span class="post-description">
+                                                        Higher Secondary Education Certificate in General Science.
+                                                    </span>
+
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="experience-sections">
+                                                <p>
+                                                    <span class="post-date">From 2004 - 2005</span>
+                                                    <br />
+                                                    <span class="post">Government High School Pandori, Jhelum - Pakistan</span>
+                                                    <br />
+
+                                                    <span class="post-description">
+                                                        Secondary School Certificate in General Science.
+                                                    </span>
+
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-------End Education Experience Section------>
+                        <!------- Start Work Experience Section------>
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <div class="work-experience">
+                                <div class="work-header">
+                                    <div class="exp-icon">
+                                        <i class="fas fa-code"></i>
+                                    </div>
+                                    <div class="exp-header">
+                                        <h4>Work Experience</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work-exp-list">
+                                <div class="line"></div>
+                                <div class="list-circles">
+                                    <ul>
+                                        <li>
+                                            <div class="experience-sections">
+                                                <p>
+                                                    <span class="post-date">From Nov. 2018 - May 2019</span>
+                                                    <br />
+                                                    <span class="post">Webite Administrator</span>
+                                                    <br />
+
+                                                    <span class="post-description">
+                                                        &#8226; Writing on-site content and updating website using Content Management System.<br />
+                                                        &#8226; Assisting with production of marketing materials and <span id="dots">...</span><span id="moretext">
+                                                            literature, creation of marketing products.<br />
+                                                            &#8226; Using MS Excel and MS Word to prepare and format data according to business/website needs.
+                                                            <br />
+                                                            &#8226; Product photography, retouching and image manipulation using Photoshop.
+                                                            <br />
+                                                            &#8226;  Performing ad-hoc duties such as customer service and stock management.
+                                                            <br />
+                                                        </span>
+                                                        <span onclick="ShowMoreText('showBtn','dots','moretext')" id="showBtn">Read more</span>
+                                                    </span>
+
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="experience-sections">
+                                                <p>
+                                                    <span class="post-date">From Oct. 2018 - Nov. 2018</span>
+                                                    <br />
+                                                    <span class="post">Order Picker/Packer</span>
+                                                    <br />
+
+                                                    <span class="post-description">
+                                                        &#8226; Order picking/packing using scanners/voice picking system. <br />
+                                                        &#8226; Stock Rotation/ quality checking.<br />
+                                                        &#8226; Working to high pick targets- fast paced environment.
+
+                                                    </span>
+
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="experience-sections">
+                                                <p>
+                                                    <span class="post-date">From 2013 - 2017</span>
+                                                    <br />
+                                                    <span class="post">Software Engineer</span>
+                                                    <br />
+
+                                                    <span class="post-description">
+                                                        &#8226; Gained sound experience as a front-end developer - developing responsive user interface. <br />
+                                                        &#8226; Team work was essential for this role and <span id="dots2">...</span><span id="moretext2">
+                                                            I built upon my interpersonal skills. <br />
+                                                            &#8226; Worked swiftly to meet deadlines.<br />
+                                                            &#8226; Well experienced in using Photoshop for creating, designing and editing icons, images and logos. <br />
+                                                            &#8226; Experience in configuring DotNetNuke (DNN) and WordPress CMS and creating, testing and maintaining
+                                                            websites.<br />
+                                                        </span>
+                                                        <span onclick="ShowMoreText('showBtn2','dots2','moretext2')" id="showBtn2">Read more</span>
+                                                    </span>
+
+                                                    <br />
+                                                </p>
+                                            </div>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-------End Work Experience Section------>
+
+                    </div>
+                </div>
+                <!-----------End of Resume Section------------>
+
+            </div>
+            <!--------End Main Content-->
+        </div>
+        <!-----------footer section-------->
+        <div id="footer-container"></div>
+    </div>
+
+</body>
+</html>
